@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="@dimen/spacing_large">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_xlarge"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imageView"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:scaleType="centerInside"
+            app:srcCompat="@drawable/logo" />
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_middle"
+            android:text="@string/app_name"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textStyle="bold"
+            android:textColor="@color/grey_90" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/hitamflat"
+            android:text="--------------------------"/>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/spacing_medium"
+        android:layout_marginTop="@dimen/spacing_medium"
+        android:autoLink="web"
+        android:text="Aplikasi E-Ours Petshop merupakan  aplikasi yang berisi informasi lengkap terkait penitipan hewan online yang terkhusus pada Ours Petshop and Clinic yang beralamatkan di Jalan Tgk Lamgugob No. 9, Banda Aceh. Aplikasi ini memiliki fitur booking online, antar-jemput hewan, riwayat penitipan, artikel kesehatan hewan, hingga fitur utamanya berupa activities update yang berisi foto kegiatan hewan selama masa penitipan.\n\nContact Person  : 081379415566 \n
+Email : ourspetshopandclinic@gmail.com\n\n\n Partner :"
+        android:textAlignment="center"
+        android:justificationMode="inter_word"
+        android:textSize="12sp"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:textColor="@color/grey_80" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageView2"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:srcCompat="@drawable/logo_unaya" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Universitas Albuyatama"
+        android:textStyle="bold"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+        android:layout_marginBottom="@dimen/spacing_xxlarge"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_getcode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_medium"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        app:cornerRadius="18dp"
+        style="@style/Button.Primary"
+        android:textAlignment="center"
+        android:paddingLeft="@dimen/spacing_xlarge"
+        android:paddingRight="@dimen/spacing_xlarge"
+        android:text="Tentang Developer"
+        android:textColor="@android:color/white" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/bt_close"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="CLose" />
+
+</LinearLayout>
+</layout>

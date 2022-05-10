@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="dev.shreyaspatil.firebase.coroutines">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.order.detail.PdfViewActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity
+            android:name=".ui.aktivitas.AktivitasHewanActivity"
+            android:screenOrientation="portrait"
+            android:exported="false" />
+        <activity android:name=".ui.main.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".base.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.picture.DetailPictureActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.detail.UpdateOrderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.dashboard.admin.ContaienrDahsboardDosenActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.dashboard.user.ContainerDashboardMahasiswaActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.maps.PickMapsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.paket.PickPaketActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.detail.CreateOrderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.dashboard.admin.DashboardAdminActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.detail.PdfCreateActivity" android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/maps_key" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

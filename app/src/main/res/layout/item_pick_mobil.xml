@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardBackgroundColor="@color/colorPrimary"
+    android:layout_width="match_parent"
+    app:cardCornerRadius="8dp"
+    android:layout_marginTop="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="4dp"
+    app:contentPadding="4dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:paddingStart="@dimen/spacing_large"
+        android:paddingEnd="@dimen/spacing_medium"
+        android:layout_height="wrap_content">
+
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/nama_paket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxLines="2"
+            android:text="VIP "
+            android:textAlignment="textStart"
+            android:textAppearance="@style/TextAppearance.AppCompat.SearchResult.Subtitle"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/facility_paket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/paket_facility"
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            app:layout_constraintEnd_toStartOf="@+id/container_ic"
+            app:layout_constraintStart_toStartOf="@+id/nama_paket"
+            app:layout_constraintTop_toBottomOf="@+id/nama_paket"
+            tools:ignore="MissingConstraints" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/harga_paket"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingTop="4dp"
+            android:layout_marginTop="@dimen/spacing_xmedium"
+            android:paddingEnd="8dp"
+            android:paddingBottom="4dp"
+            android:text="Harga : Rp 200.000 /hari"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            style="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/facility_paket"
+            app:layout_constraintStart_toStartOf="@+id/facility_paket"
+            app:layout_constraintTop_toBottomOf="@+id/facility_paket" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/container_ic"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            app:cardBackgroundColor="@color/grey"
+            app:cardCornerRadius="12dp"
+            android:layout_marginEnd="64dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintDimensionRatio="H,1:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/img_paket"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@color/colorPrimary"
+                android:layout_gravity="center"
+                app:srcCompat="@drawable/img_dog"
+                tools:ignore="MissingConstraints" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

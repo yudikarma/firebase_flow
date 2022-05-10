@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/spacing_xsmall"
+    android:layout_height="wrap_content"
+    android:background="@color/grey_90"
+    android:paddingBottom="@dimen/spacing_large"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spacing_xlarge"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <ImageButton
+            android:id="@+id/bt_close"
+            android:layout_width="@dimen/spacing_xlarge"
+            android:layout_height="@dimen/spacing_xlarge"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:tint="@color/grey_20"
+            app:srcCompat="@drawable/ic_close" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:orientation="vertical"
+        android:padding="@dimen/spacing_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/profile_dev"
+            app:civ_border_color="@color/overlay_dark_10"
+            app:civ_border_width="1dp" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_small"
+            android:text="Wisa Firnanda "
+            android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/spacing_middle"
+            android:layout_marginRight="@dimen/spacing_middle"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:textSize="10sp"
+            android:text="wisa.firnanda98@gmail.com"
+            android:textAlignment="center"
+            android:textColor="@color/grey_20" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/about"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:layout_marginStart="@dimen/spacing_medium"
+            android:layout_marginEnd="@dimen/spacing_medium"
+            android:textSize="10sp"
+            android:text="Wisa Firnanda, A.Md.Kom dilahirkan di Malang, Jawa Timur pada tanggal 22 Juni 1998. Anak bungsu dari tiga bersaudara pasangan dari Ir. Samsoel Basri dan Widati. Penulis telah menempuh pendidikan formal sebagai berikut: TK Srikandi di Aceh Utara (2003-2004), SD Negeri 3 Dewantara di Aceh Utara (2004-2010), SMP Swasta Iskandar Muda di Aceh Utara (2010-2013), SMA Negeri Modal Bangsa Arun di Lhokseumawe (2013-2016), Diploma III Politeknik Aceh (2016-2019) dan akhirnya diterima sebagai mahasiswa di program studi Sarjana jurusan Sistem Informasi pada tahun 2020.\n"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:textColor="@color/grey_20" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/spacing_medium"
+            android:textSize="10sp"
+            android:text="Contact Person  : 082167651933"
+            android:textAlignment="center"
+            android:justificationMode="inter_word"
+            android:textColor="@color/grey_20" />
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_follow"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:layout_marginTop="@dimen/spacing_large"
+            app:backgroundTint="@color/red_400"
+            android:paddingLeft="@dimen/spacing_mlarge"
+            android:paddingRight="@dimen/spacing_mlarge"
+            android:text="Close"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

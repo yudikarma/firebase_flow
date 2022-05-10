@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_normal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:layout_marginBottom="@dimen/spacing_xsmall"
+            android:orientation="horizontal">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/no"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:text="1" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date_titip"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="01/08/2022"
+                android:textSize="10sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/date_ambil"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:text="01/08/2022"
+                android:textSize="10sp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/pelanggan"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:text="Wisa Firnanda"
+                android:textSize="10sp" />
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/price"
+                style="@style/TextAppearance.MaterialComponents.Caption"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="550.000" />
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/spacing_xsmall"
+            android:background="@color/grey800"/>
+    </LinearLayout>
+</layout>

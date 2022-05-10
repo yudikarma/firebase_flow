@@ -1,0 +1,38 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.alfattah.absensiproject.MainActivity">
+    <item
+        android:id="@+id/dashboard_admin"
+        android:orderInCategory="100"
+        android:title="Dashboard"
+        android:icon="@drawable/ic_apps"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/history_admin"
+        android:orderInCategory="100"
+        android:title="report"
+        android:icon="@drawable/ic_history"
+        app:showAsAction="never" />
+
+    <!--<item
+        android:id="@+id/reportFragment"
+        android:orderInCategory="100"
+        android:title="Report"
+        android:icon="@drawable/ic_assignment"
+        app:showAsAction="never" />-->
+
+    <item
+        android:id="@+id/profil_admin"
+        android:orderInCategory="100"
+        android:title="Profil"
+        android:icon="@drawable/ic_account_circle"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/about_admin"
+        android:orderInCategory="100"
+        android:title="about"
+        android:icon="@drawable/ic_exit_to_app_black_24dp"
+        app:showAsAction="never" />
+</menu>
