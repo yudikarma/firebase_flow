@@ -139,6 +139,18 @@ fun Date?.localeDateFromTimestampFirebase(newFormatPattern:String = "dd-MMMM-yyy
    }
 }
 
+fun Date?.localeDateFromTimestampFirebase2(newFormatPattern:String = "dd MMMM yyyy HH:mm") : String ?{
+    /*
+    * Thu Jun 02 11:47:04 GMT+07:00 2022
+    * */
+   try {
+       val anu = SimpleDateFormat("EEEE MMM dd HH:mm:ss zzzz yyyy",Locale.US).format(this)
+      return anu.parseDate("EEEE MMM dd HH:mm:ss zzzz yyyy",newFormatPattern)
+   }catch (e : Exception){
+    return null
+   }
+}
+
 fun Context.showAlert(message: String) {
     val dialog = alert(message) { positiveButton("OK") {} }.build()
     dialog.setCancelable(false)

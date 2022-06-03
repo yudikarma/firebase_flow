@@ -1,7 +1,6 @@
 package dev.shreyaspatil.firebase.coroutines.ui.dashboard.admin
 
 
-import android.app.ActionBar
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
@@ -10,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.navArgs
 import com.wdullaer.materialdatetimepicker.date.DatePickerDialog
 
 import dev.shreyaspatil.firebase.coroutines.ui.history.HistoryFragment.Companion.DATE_CODE_FROM
@@ -20,16 +18,12 @@ import dev.shreyaspatil.firebase.coroutines.databinding.FragmentDashboardSupirBi
 import dev.shreyaspatil.firebase.coroutines.model.Orders
 import dev.shreyaspatil.firebase.coroutines.base.BaseFragment
 import dev.shreyaspatil.firebase.coroutines.model.Users
-import dev.shreyaspatil.firebase.coroutines.ui.aktivitas.AktivitasHewanActivity
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.CreateOrderActivity
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.UpdateOrderActivity
+import dev.shreyaspatil.firebase.coroutines.ui.order.UpdateOrderActivity
 import dev.shreyaspatil.firebase.coroutines.utils.Constants
 import dev.shreyaspatil.firebase.coroutines.utils.State
-import dev.shreyaspatil.firebase.coroutines.utils.getCallerActivity
 import dev.shreyaspatil.firebase.coroutines.utils.onClick
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
-import org.jetbrains.anko.support.v4.toast
 import java.util.*
 
 
@@ -117,7 +111,6 @@ class DashboardAdminFragment : BaseFragment<FragmentDashboardSupirBinding>(),
         binding.toolbar.gone()
         binding.searchView.gone()
 
-        setHasOptionsMenu(true)
 
 
 
@@ -128,11 +121,7 @@ class DashboardAdminFragment : BaseFragment<FragmentDashboardSupirBinding>(),
             getListParcel()
         }
 
-
-
-
-
-
+        setHasOptionsMenu(true)
 
     }
 
@@ -225,7 +214,7 @@ class DashboardAdminFragment : BaseFragment<FragmentDashboardSupirBinding>(),
 
 
     override fun onItemSelected(position: Int, item: Orders) {
-        UpdateOrderActivity.getStaredIntent(activity,item,UpdateOrderActivity.ShowParcelRequestCode)
+        UpdateOrderActivity.getStaredIntent(activity,item, UpdateOrderActivity.ShowParcelRequestCode)
     }
 
 

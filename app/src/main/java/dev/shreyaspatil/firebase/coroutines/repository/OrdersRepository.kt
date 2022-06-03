@@ -1,8 +1,11 @@
 package dev.shreyaspatil.firebase.coroutines.repository
 
 import com.dekape.core.utils.logD
+import com.dekape.core.utils.toCalendar
 import com.google.android.gms.tasks.Tasks
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
 import com.google.firebase.storage.FirebaseStorage
@@ -247,9 +250,9 @@ class OrdersRepository {
 
 
 
-        val snapshot = FirebaseFirestore.getInstance().collection(Constants.COLLECTION_aktivitas+"/$idAktivitas/$idAktivitas")
+        val snapshot = FirebaseFirestore.getInstance().collection(Constants.COLLECTION_aktivitas+"/$idAktivitas/$idAktivitas").orderBy("tanggal",
+            Query.Direction.DESCENDING)
 
-        logD("path:"+snapshot.path)
 
         val data = Tasks.await(snapshot.get())
 
@@ -310,11 +313,16 @@ class OrdersRepository {
         emit(State.loading())
         val newId = mAktivitasCollection.document(orderId).id
         aktivitas.id = newId
+        aktivitas.tanggal = Timestamp.now().toDate()
         val userPublicProfileRef = mAktivitasCollection.document(orderId).collection(newId)
         //Use the id for whatever you need
-        Tasks.await(userPublicProfileRef.add(aktivitas))
+        val task = Tasks.await(userPublicProfileRef.add(aktivitas))
         // Emit success state with post reference
-        emit(State.success(aktivitas))
+        if (task.get().exception != null)
+            emit(State.failed(task.get().exception?.message.toString()))
+        else
+            emit(State.success(aktivitas))
+
 
     }.catch {
         // If exception is thrown, emit failed state along with message.

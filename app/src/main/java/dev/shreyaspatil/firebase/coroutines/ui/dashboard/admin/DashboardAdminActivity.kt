@@ -1,22 +1,12 @@
 package dev.shreyaspatil.firebase.coroutines.ui.dashboard.admin
 
 
-import android.app.ActionBar
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.Menu
-import android.view.View
-import android.view.ViewGroup
-import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.marginBottom
-import androidx.fragment.app.FragmentActivity
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.navArgs
-import androidx.navigation.navArgs
 import com.dekape.core.utils.toast
 import com.ferfalk.simplesearchview.SimpleSearchView
 import com.ferfalk.simplesearchview.utils.DimensUtils.convertDpToPx
@@ -28,21 +18,15 @@ import dev.shreyaspatil.firebase.coroutines.R
 import dev.shreyaspatil.firebase.coroutines.base.BaseActivity
 import dev.shreyaspatil.firebase.coroutines.databinding.FragmentDashboardSupirBinding
 import dev.shreyaspatil.firebase.coroutines.model.Orders
-import dev.shreyaspatil.firebase.coroutines.base.BaseFragment
-import dev.shreyaspatil.firebase.coroutines.ui.aktivitas.AktivitasHewanActivity
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.CreateOrderActivity
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.UpdateOrderActivity
+import dev.shreyaspatil.firebase.coroutines.ui.order.UpdateOrderActivity
 import dev.shreyaspatil.firebase.coroutines.utils.Constants
 import dev.shreyaspatil.firebase.coroutines.utils.State
-import dev.shreyaspatil.firebase.coroutines.utils.getCallerActivity
 import dev.shreyaspatil.firebase.coroutines.utils.onClick
 import kotlinx.android.synthetic.main.fragment_dashboard_supir.*
 import kotlinx.android.synthetic.main.header_dashboard_supir.view.*
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 /**
@@ -310,7 +294,7 @@ class DashboardAdminActivity : BaseActivity<FragmentDashboardSupirBinding>(),
 
 
     override fun onItemSelected(position: Int, item: Orders) {
-        UpdateOrderActivity.getStaredIntent(this,item,UpdateOrderActivity.ShowParcelRequestCode)
+        UpdateOrderActivity.getStaredIntent(this,item, UpdateOrderActivity.ShowParcelRequestCode)
     }
 
 
@@ -343,13 +327,16 @@ class DashboardAdminActivity : BaseActivity<FragmentDashboardSupirBinding>(),
         val inflater = menuInflater
 
         if (isActionSearch) {
-            binding.lyCalendar.container.visible()
+            binding.lyCalendar.container.gone()
+            binding.searchView.visible()
             inflater.inflate(R.menu.search_menu,menu)
             val itemSearch = menu?.findItem(R.id.action_search)
             itemSearch?.let {searchView.setMenuItem(it)
             return true}
-        } else
+        } else{
+            binding.lyCalendar.container.visible()
             binding.searchView.gone()
+        }
 
 
         return false

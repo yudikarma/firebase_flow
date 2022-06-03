@@ -1,4 +1,4 @@
-package dev.shreyaspatil.firebase.coroutines.ui.order.detail
+package dev.shreyaspatil.firebase.coroutines.ui.order
 
 
 import android.Manifest
@@ -9,8 +9,6 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.dekape.core.dialog.showMessageDialog
-import com.dekape.core.utils.currentDate
-import com.dekape.core.utils.toCalendar
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.MapsInitializer
@@ -106,8 +104,8 @@ class UpdateOrderActivity : BaseActivity<FragmentShowParcelBinding>() {
             binding.apply {
                 namaPeliharaan.text = order.namaPeliharaan
                 jenisHewan.text = order.jenisPeliharaan
-                tglMasuk.text = order.localeDateCheckIn.toString()
-                tglKeluar.text = order.localeDateCheckOut.toString()
+                tglMasuk.text = order.localeDateNoMonthNameCheckIn.toString()
+                tglKeluar.text = order.localeDateddNoMonthNameCheckOut.toString()
 
                 with(mapView) {
                     // Initialise the MapView
@@ -153,7 +151,7 @@ class UpdateOrderActivity : BaseActivity<FragmentShowParcelBinding>() {
                     uiScope.launch {
                         orderViewsModel.updateOrders(order).collect { state ->
                             when(state){
-                                is State.Loading -> showErrorDialog()
+                                is State.Loading -> showLoadingDialog()
                                 is State.Failed ->{
                                     dismissLoadingDialog()
                                     showErrorDialog(state.message)
@@ -299,7 +297,7 @@ class UpdateOrderActivity : BaseActivity<FragmentShowParcelBinding>() {
                 file_name?.let {
                     when(lastRequestCode){
 
-                        UpdateOrderActivity.CAMERA_PERMISSION_CODE -> {
+                        CAMERA_PERMISSION_CODE -> {
                             file_photo_barang = file_name
                             file_photo_barang?.let {
                                 uploadFotoHewan(it)

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
+import com.dekape.core.utils.logD
 import com.lriccardo.timelineview.TimelineDecorator
 import com.lriccardo.timelineview.TimelineView
 import dev.shreyaspatil.firebase.coroutines.R
@@ -92,7 +93,10 @@ class AktivitasHewanActivity : BaseActivity<ActivityAktivitasHewanBinding>(),Akt
                         }
                         is State.Success -> {
                             dismissLoadingDialog()
-                            orders?.let { order -> rvAdapters.submitList(it.data,order) }
+                            logD(it.toString())
+                            orders?.let {
+                                    order -> rvAdapters.submitList(it.data,order)
+                            }
                         }
                     }
                 }

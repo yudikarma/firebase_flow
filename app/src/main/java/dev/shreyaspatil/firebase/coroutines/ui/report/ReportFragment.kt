@@ -1,6 +1,5 @@
 package dev.shreyaspatil.firebase.coroutines.ui.report
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,21 +8,18 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import com.dekape.core.utils.logD
-import com.dekape.core.utils.toCalendar
 import dev.shreyaspatil.firebase.coroutines.R
 import dev.shreyaspatil.firebase.coroutines.databinding.FragmentReportBinding
 import dev.shreyaspatil.firebase.coroutines.model.GeneralModel
 import dev.shreyaspatil.firebase.coroutines.model.Orders
 import dev.shreyaspatil.firebase.coroutines.base.BaseFragment
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.PdfCreateActivity
+import dev.shreyaspatil.firebase.coroutines.ui.order.PdfCreateActivity
 import dev.shreyaspatil.firebase.coroutines.utils.State
 import dev.shreyaspatil.firebase.coroutines.utils.Utils
 import dev.shreyaspatil.firebase.coroutines.utils.onClick
-import dev.shreyaspatil.firebase.coroutines.utils.toDate
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.jetbrains.anko.support.v4.toast
-import java.time.format.DateTimeFormatter
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -123,6 +119,9 @@ class ReportFragment : BaseFragment<FragmentReportBinding>() {
                    }
                    is State.Success -> {
                        dismissLoadingDialog()
+
+                       if (listItemReport.size > 0)
+                           listItemReport.clear()
 
                        listItemReport.addAll(it.data)
                        reportRvAdapter.set(it.data as ArrayList<Orders>)

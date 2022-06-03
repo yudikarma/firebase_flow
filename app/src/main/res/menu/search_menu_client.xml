@@ -9,7 +9,8 @@
 
     <item
         android:id="@+id/action_logout"
-        android:title="logout"
+        android:title=""
+        android:icon="@drawable/logout"
         android:iconTint="@color/white"
-        app:showAsAction="never" />
+        app:showAsAction="always" />
 </menu>

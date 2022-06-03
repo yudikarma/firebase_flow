@@ -1,4 +1,4 @@
-package dev.shreyaspatil.firebase.coroutines.ui.order.detail
+package dev.shreyaspatil.firebase.coroutines.ui.order
 
 import android.content.Intent
 import android.graphics.drawable.ColorDrawable

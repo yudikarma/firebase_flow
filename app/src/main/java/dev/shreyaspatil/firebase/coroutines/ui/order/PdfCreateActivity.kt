@@ -1,9 +1,8 @@
-package dev.shreyaspatil.firebase.coroutines.ui.order.detail
+package dev.shreyaspatil.firebase.coroutines.ui.order
 
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
-import android.net.Uri
 import android.os.Bundle
 import android.text.Spannable
 import android.text.SpannableString
@@ -13,13 +12,10 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.FileProvider
-import androidx.core.text.HtmlCompat
 import com.dekape.core.utils.currentDate
 import com.dekape.core.utils.toCalendar
 import com.dekape.core.utils.toPriceFormat
-import com.dekape.core.utils.toast
 import com.tejpratapsingh.pdfcreator.activity.PDFCreatorActivity
-import com.tejpratapsingh.pdfcreator.activity.PDFViewerActivity
 import com.tejpratapsingh.pdfcreator.utils.PDFUtil.PDFUtilListener
 import com.tejpratapsingh.pdfcreator.views.PDFBody
 import com.tejpratapsingh.pdfcreator.views.PDFFooterView
@@ -30,7 +26,6 @@ import com.tejpratapsingh.pdfcreator.views.basic.*
 import dev.shreyaspatil.firebase.coroutines.R
 import dev.shreyaspatil.firebase.coroutines.model.Orders
 import dev.shreyaspatil.firebase.coroutines.model.PdfOrders
-import dev.shreyaspatil.firebase.coroutines.ui.aktivitas.AktivitasHewanActivity
 import java.io.File
 import java.lang.Exception
 import java.net.URLConnection
@@ -90,14 +85,14 @@ class PdfCreateActivity : PDFCreatorActivity() {
 
         createPDF(currentDate.toCalendar().time.toString(), object : PDFUtilListener {
             override fun pdfGenerationSuccess(savedPDFFile: File) {
-                Toast.makeText(this@PdfCreateActivity, "PDF Created", Toast.LENGTH_SHORT)
+                Toast.makeText(this@PdfCreateActivity, "PDF Report Created", Toast.LENGTH_SHORT)
                     .show()
             }
 
             override fun pdfGenerationFailure(exception: Exception) {
                 Toast.makeText(
                     this@PdfCreateActivity,
-                    "PDF NOT Created",
+                    "PDF Rerport Fail to Create ${exception.localizedMessage}",
                     Toast.LENGTH_SHORT
                 ).show()
             }

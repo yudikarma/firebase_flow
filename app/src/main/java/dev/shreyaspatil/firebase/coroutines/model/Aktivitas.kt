@@ -9,6 +9,7 @@ import java.util.*
 @Parcelize
 data class Aktivitas(
     var id:String="",
+    @ServerTimestamp
     var tanggal: Date? =null,
     var caption:String = "",
     var urlImg:String = "",

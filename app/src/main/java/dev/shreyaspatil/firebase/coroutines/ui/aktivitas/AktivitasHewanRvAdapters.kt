@@ -17,6 +17,7 @@ import dev.shreyaspatil.firebase.coroutines.ui.paket.PickPaketRvAdapters
 import dev.shreyaspatil.firebase.coroutines.ui.picture.DetailPictureActivity
 import dev.shreyaspatil.firebase.coroutines.utils.ekstension.loadFromUrl
 import dev.shreyaspatil.firebase.coroutines.utils.localeDateFromTimestampFirebase
+import dev.shreyaspatil.firebase.coroutines.utils.localeDateFromTimestampFirebase2
 
 class AktivitasHewanRvAdapters(private val interaction: Interaction? = null) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
@@ -76,7 +77,7 @@ class AktivitasHewanRvAdapters(private val interaction: Interaction? = null) :
             itemView.setOnClickListener {
                 interaction?.onItemSelected(adapterPosition, item)
             }
-            findViewById<MaterialTextView>(R.id.tag_location).text = item.tanggal?.localeDateFromTimestampFirebase() + " WIB"
+            findViewById<MaterialTextView>(R.id.tag_location).text = item.tanggal?.localeDateFromTimestampFirebase2() + " WIB"
             findViewById<MaterialTextView>(R.id.feed_post_caption).text = item.caption
             orders?.let {
                 findViewById<TextView>(R.id.feed_profilName).text = it.namaPeliharaan

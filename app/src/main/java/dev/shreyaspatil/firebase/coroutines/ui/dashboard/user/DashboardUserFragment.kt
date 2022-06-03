@@ -6,13 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
-import androidx.cardview.widget.CardView
 import dev.shreyaspatil.firebase.coroutines.R
 import dev.shreyaspatil.firebase.coroutines.base.BaseFragment
 import dev.shreyaspatil.firebase.coroutines.databinding.FragmentDashboardUserBinding
 import dev.shreyaspatil.firebase.coroutines.ui.dashboard.admin.DashboardAdminActivity
-import dev.shreyaspatil.firebase.coroutines.ui.dashboard.admin.DashboardAdminFragment
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.CreateOrderActivity
+import dev.shreyaspatil.firebase.coroutines.ui.order.CreateOrderActivity
 import dev.shreyaspatil.firebase.coroutines.utils.onClick
 
 // TODO: Rename parameter arguments, choose names that match
@@ -43,9 +41,9 @@ class DashboardUserFragment : BaseFragment<FragmentDashboardUserBinding>() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnOrder.onClick { CreateOrderActivity.getStaredIntent(this,CreateOrderActivity.CreateParcelRequestCode) }
+        binding.btnOrder.onClick { CreateOrderActivity.getStaredIntent(this, CreateOrderActivity.CreateParcelRequestCode) }
         binding.btnLogout.onClick {  logout()}
-        binding.btnActivityUpdate.onClick {   DashboardAdminActivity.getStaredIntent(requireActivity() as AppCompatActivity,DashboardAdminActivity.DashboardAdminActivityRequestCode,false) }
+        binding.btnActivityUpdate.onClick {   DashboardAdminActivity.getStaredIntent(requireActivity() as AppCompatActivity,DashboardAdminActivity.DashboardAdminActivityRequestCode,true) }
 
     }
 

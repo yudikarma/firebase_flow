@@ -1,4 +1,4 @@
-package dev.shreyaspatil.firebase.coroutines.ui.order.detail
+package dev.shreyaspatil.firebase.coroutines.ui.order
 
 
 import android.Manifest
@@ -7,7 +7,6 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.dekape.core.utils.currentDateMutation
 import com.dekape.core.utils.toCalendar
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
@@ -30,21 +29,17 @@ import dev.shreyaspatil.firebase.coroutines.ui.maps.PickMapsActivity
 import dev.shreyaspatil.firebase.coroutines.ui.paket.PickPaketActivity
 import dev.shreyaspatil.firebase.coroutines.ui.picture.DetailPictureActivity
 import dev.shreyaspatil.firebase.coroutines.utils.*
-import dev.shreyaspatil.firebase.coroutines.utils.Firebase.uploadToFirebase
 import dev.shreyaspatil.firebase.coroutines.utils.Utils.generateKeywords
 import dev.shreyaspatil.firebase.coroutines.utils.Utils.getCurrentDate
-import dev.shreyaspatil.firebase.coroutines.utils.Utils.getTimeStampFromDateStr
 import dev.shreyaspatil.firebase.coroutines.utils.ekstension.loadFromUrl
 import dev.shreyaspatil.firebase.coroutines.utils.ekstension.toPriceFormat
 import kotlinx.android.synthetic.main.fragment_show_parcel.*
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import org.jetbrains.anko.alert
-import org.jetbrains.anko.support.v4.alert
 import permissions.dispatcher.*
 import pl.aprilapps.easyphotopicker.*
 import java.io.File
-import java.time.temporal.ChronoUnit
 import java.util.*
 
 /**

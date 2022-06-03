@@ -18,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.order.detail.PdfViewActivity"
+            android:name=".ui.order.PdfViewActivity"
             android:screenOrientation="portrait"
             android:exported="false" />
         <activity
@@ -36,14 +36,14 @@
         <activity android:name=".base.BaseActivity"
             android:screenOrientation="portrait" />
         <activity android:name=".ui.picture.DetailPictureActivity" android:screenOrientation="portrait" />
-        <activity android:name=".ui.order.detail.UpdateOrderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.UpdateOrderActivity" android:screenOrientation="portrait" />
         <activity android:name=".ui.dashboard.admin.ContaienrDahsboardDosenActivity" android:screenOrientation="portrait" />
         <activity android:name=".ui.dashboard.user.ContainerDashboardMahasiswaActivity" android:screenOrientation="portrait" />
         <activity android:name=".ui.maps.PickMapsActivity" android:screenOrientation="portrait" />
         <activity android:name=".ui.paket.PickPaketActivity" android:screenOrientation="portrait" />
-        <activity android:name=".ui.order.detail.CreateOrderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.CreateOrderActivity" android:screenOrientation="portrait" />
         <activity android:name=".ui.dashboard.admin.DashboardAdminActivity" android:screenOrientation="portrait" />
-        <activity android:name=".ui.order.detail.PdfCreateActivity" android:screenOrientation="portrait" />
+        <activity android:name=".ui.order.PdfCreateActivity" android:screenOrientation="portrait" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"

@@ -16,7 +16,6 @@ import dev.shreyaspatil.firebase.coroutines.R
 import dev.shreyaspatil.firebase.coroutines.databinding.FragmentDashboardLoketBinding
 import dev.shreyaspatil.firebase.coroutines.model.Orders
 import dev.shreyaspatil.firebase.coroutines.base.BaseFragment
-import dev.shreyaspatil.firebase.coroutines.ui.order.detail.UpdateOrderActivity
 import dev.shreyaspatil.firebase.coroutines.utils.onClick
 import org.jetbrains.anko.support.v4.selector
 import java.util.*

@@ -241,7 +241,7 @@ class RegistrasiFragment : BaseFragment<FragmentRegistrasiBinding>() {
         } else {
 
             if(password.length <= 5){
-                toast("Password harus lebih dari 6 karakter")
+                toast("password harus 6 karakter")
             } else if (!password.equals(passwordConfirm)){
                 toast("Password harus sama dengan confirm password")
             }else if (!email.isValidEmail()){
