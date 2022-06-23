@@ -37,7 +37,7 @@
 
                     <include
                         android:id="@+id/ly_calendar"
-                        layout="@layout/view_calendar_betweenxx"
+                        layout="@layout/view_calendar_betweenxxx"
                         app:layout_constraintBottom_toBottomOf="@+id/include"
                         app:layout_constraintTop_toBottomOf="@+id/include" />
 

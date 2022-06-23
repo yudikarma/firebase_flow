@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.login.LoginFragment"
+        android:name="com.wisa.eOurPetshop.ui.login.LoginFragment"
         tools:layout="@layout/fragment_login"
         android:label="" >
         <action
@@ -30,19 +30,19 @@
     </fragment>
     <fragment
         android:id="@+id/registrasiFragment"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.registrasi.RegistrasiFragment"
+        android:name="com.wisa.eOurPetshop.ui.registrasi.RegistrasiFragment"
         android:label=""
         tools:layout="@layout/fragment_registrasi">
         <argument android:name="rule" app:argType="string"/>
     </fragment>
     <fragment
         android:id="@+id/forgotPasswordFragment"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.forgot.ForgotPasswordFragment"
+        android:name="com.wisa.eOurPetshop.ui.forgot.ForgotPasswordFragment"
         tools:layout="@layout/fragment_forgot_password"
         android:label="ForgotPasswordFragment" />
     <fragment
         android:id="@+id/spalshFragment"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.splash.SplashFragment"
+        android:name="com.wisa.eOurPetshop.ui.splash.SplashFragment"
         android:label="fragment_spalsh"
         tools:layout="@layout/fragment_spalsh" >
         <action

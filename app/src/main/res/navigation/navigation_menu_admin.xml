@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/dashboard_admin"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.dashboard.admin.DashboardAdminFragment"
+        android:name="com.wisa.eOurPetshop.ui.dashboard.admin.DashboardAdminFragment"
         android:label="home"
         app:enterAnim="@anim/slide_in_right"
         app:exitAnim="@anim/slide_out_left"
@@ -18,7 +18,7 @@
     </fragment>
     <fragment
         android:id="@+id/about_admin"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.about.AboutFragment"
+        android:name="com.wisa.eOurPetshop.ui.about.AboutFragment"
         android:label="About"
         app:enterAnim="@anim/slide_in_right"
         app:exitAnim="@anim/slide_out_left"
@@ -27,7 +27,7 @@
         app:popExitAnim="@anim/slide_out_right"/>
     <fragment
         android:id="@+id/profil_admin"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.profile.ProfilFragment"
+        android:name="com.wisa.eOurPetshop.ui.profile.ProfilFragment"
         android:label="Profil"
         tools:layout="@layout/fragment_profil_supir"
         app:enterAnim="@anim/slide_in_right"
@@ -36,7 +36,7 @@
         app:popExitAnim="@anim/slide_out_right"/>
     <fragment
         android:id="@+id/history_admin"
-        android:name="dev.shreyaspatil.firebase.coroutines.ui.report.ReportFragment"
+        android:name="com.wisa.eOurPetshop.ui.report.ReportFragment"
         android:label="history"
         tools:layout="@layout/fragment_report"
         app:enterAnim="@anim/slide_in_right"
